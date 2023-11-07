@@ -1,39 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_iterative_factorial.c                           :+:      :+:    :+:   */
+/*   ft_print_params.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mzhukova <mzhukova@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/06 19:59:25 by mzhukova          #+#    #+#             */
-/*   Updated: 2023/11/07 17:30:56 by mzhukova         ###   ########.fr       */
+/*   Created: 2023/11/07 16:40:24 by mzhukova          #+#    #+#             */
+/*   Updated: 2023/11/07 17:23:00 by mzhukova         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_iterative_factorial(int nb)
+void	ft_putchar(char c);
+
+int	main(int argc, char *argv[])
 {
-	int	i;
-	int	res;
-
-	if (nb == 0)
-		return (1);
-	else if (nb < 0 || !nb || nb > 12)
-		return (0);
-	else
+	while (argc > 0)
 	{
-		i = 1;
-		res = 1;
-		while (i <= nb)
+		while (*argv[argc] != '\0')
 		{
-			res = res * i;
-			i++;
+			ft_putchar(*argv[argc]);
 		}
+		ft_putchar('\n');
+		argc--;
 	}
-	return (res);
 }
-
-// int	main(void)
-// {
-// 	printf("%i\n", ft_iterative_factorial(13));
-// 	printf("%i", INT_MAX);
-// }

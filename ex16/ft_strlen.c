@@ -6,7 +6,7 @@
 /*   By: mzhukova <mzhukova@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 15:26:21 by mzhukova          #+#    #+#             */
-/*   Updated: 2023/11/07 15:41:05 by mzhukova         ###   ########.fr       */
+/*   Updated: 2023/11/07 17:22:52 by mzhukova         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,10 @@ int	ft_strlen(char *str)
 	int	len;
 
 	len = 0;
-
-	while (str != '\0')
+	while (*str != '\0')
 	{
 		len++;
+		str++;
 	}
 	return (len);
 }

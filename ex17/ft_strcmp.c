@@ -1,39 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_iterative_factorial.c                           :+:      :+:    :+:   */
+/*   ft_strcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mzhukova <mzhukova@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/06 19:59:25 by mzhukova          #+#    #+#             */
-/*   Updated: 2023/11/07 17:30:56 by mzhukova         ###   ########.fr       */
+/*   Created: 2023/11/07 15:42:30 by mzhukova          #+#    #+#             */
+/*   Updated: 2023/11/07 16:39:30 by mzhukova         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_iterative_factorial(int nb)
+int	ft_strcmp(char *s1, char *s2)
 {
-	int	i;
-	int	res;
-
-	if (nb == 0)
-		return (1);
-	else if (nb < 0 || !nb || nb > 12)
-		return (0);
-	else
+	while (*s1 && *s1 == *s2)
 	{
-		i = 1;
-		res = 1;
-		while (i <= nb)
-		{
-			res = res * i;
-			i++;
-		}
+		s1++;
+		s2++;
 	}
-	return (res);
+	return (s1 - s2);
 }
-
-// int	main(void)
-// {
-// 	printf("%i\n", ft_iterative_factorial(13));
-// 	printf("%i", INT_MAX);
-// }
