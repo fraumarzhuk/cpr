@@ -6,16 +6,16 @@
 /*   By: mzhukova <mzhukova@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 15:42:30 by mzhukova          #+#    #+#             */
-/*   Updated: 2023/11/07 16:39:30 by mzhukova         ###   ########.fr       */
+/*   Updated: 2023/11/07 18:37:32 by mzhukova         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_strcmp(char *s1, char *s2)
 {
-	while (*s1 && *s1 == *s2)
+	while (*s1 && *s2 && *s1 == *s2)
 	{
 		s1++;
 		s2++;
 	}
-	return (s1 - s2);
+	return (*s1 - *s2);
 }

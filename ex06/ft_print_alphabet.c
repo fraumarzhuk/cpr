@@ -6,7 +6,7 @@
 /*   By: mzhukova <mzhukova@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 19:09:57 by mzhukova          #+#    #+#             */
-/*   Updated: 2023/11/06 19:27:40 by mzhukova         ###   ########.fr       */
+/*   Updated: 2023/11/07 18:24:29 by mzhukova         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,14 +15,11 @@ void	ft_putchar(char c);
 void	ft_print_alphabet(void)
 {
 	char	c;
-	int		i;
 
-	i = 1;
 	c = 'a';
-	while (1 < 27)
+	while (c <= 'z')
 	{
 		ft_putchar(c);
-		i++;
 		c++;
 	}
 }

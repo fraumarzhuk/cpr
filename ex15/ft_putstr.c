@@ -6,7 +6,7 @@
 /*   By: mzhukova <mzhukova@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 15:16:18 by mzhukova          #+#    #+#             */
-/*   Updated: 2023/11/07 15:25:41 by mzhukova         ###   ########.fr       */
+/*   Updated: 2023/11/07 18:32:20 by mzhukova         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	ft_putstr(char *str)
 {
 	while (*str != '\0')
 	{
-		ft_putchar(str);
+		ft_putchar(*str);
 		str++;
 	}
 }
