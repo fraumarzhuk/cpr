@@ -6,7 +6,7 @@
 /*   By: mzhukova <mzhukova@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/11 18:14:30 by mzhukova          #+#    #+#             */
-/*   Updated: 2023/11/11 18:45:38 by mzhukova         ###   ########.fr       */
+/*   Updated: 2023/11/11 18:54:46 by mzhukova         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ int	main(int argc, char *argv[])
 
 	ft_perror(argc);
 	fd = open(argv[1], O_RDONLY);
-	if (fd == -1)
+	if (argc > 1 && (fd == -1))
 	{
 		ft_putstr("Cannot read file.\n");
 		return (1);
@@ -61,7 +61,7 @@ int	main(int argc, char *argv[])
 		ft_putchar(ch);
 		bytes_read = read(fd, &ch, 1);
 	}
-	if (bytes_read == -1)
+	if (argc > 1 && (bytes_read == -1))
 	{
 		ft_putstr("Cannot read file.\n");
 		close(fd);
