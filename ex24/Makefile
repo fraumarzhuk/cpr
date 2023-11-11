@@ -3,17 +3,18 @@ CC = gcc
 CFLAGS = -Wall -Wextra -Werror
 
 SRCS = srcs/ft_putchar.c srcs/ft_putstr.c srcs/ft_strcmp.c srcs/ft_strlen.c srcs/ft_swap.c
-OBJS = $(SRCS: .c=.o)
+OBJS = $(SRCS:.c=.o)
 
 all: $(NAME)
 
-$(NAME) : $(OBJS)
+$(NAME): $(OBJS)
 	ar -rcs $(NAME) $(OBJS)
-%.o : %.c
+%.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@
 clean:
 	rm -f $(OBJS)
 fclean:
 	rm -f $(NAME)
 re: fclean all
+
 .PHONY: all clean fclean re
