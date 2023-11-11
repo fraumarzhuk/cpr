@@ -6,7 +6,7 @@
 /*   By: mzhukova <mzhukova@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/11 18:14:30 by mzhukova          #+#    #+#             */
-/*   Updated: 2023/11/11 18:36:47 by mzhukova         ###   ########.fr       */
+/*   Updated: 2023/11/11 18:45:38 by mzhukova         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,17 +30,15 @@ void	ft_putstr(char *str)
 	}
 }
 
-void	ft_perror(int argc, char **argv)
+void	ft_perror(int argc)
 {
 	if (argc == 1)
 	{
 		ft_putstr("File name missing.\n");
-		return (1);
 	}
 	else if (argc > 2)
 	{
 		ft_putstr("Too many arguments.\n");
-		return (1);
 	}
 }
 
@@ -50,7 +48,7 @@ int	main(int argc, char *argv[])
 	char	ch;
 	ssize_t	bytes_read;
 
-	ft_perror(argc, argv);
+	ft_perror(argc);
 	fd = open(argv[1], O_RDONLY);
 	if (fd == -1)
 	{
