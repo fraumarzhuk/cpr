@@ -1,13 +1,8 @@
-NAME = libft.a
+NAME = ft_display_file
 CC = gcc
 CFLAGS = -Wall -Wextra -Werror
 
-SRCS =	srcs/ft_putchar.c \
-		srcs/ft_putstr.c \
-		srcs/ft_strcmp.c \
-		srcs/ft_strlen.c \
-		srcs/ft_swap.c
-
+SRCS = ft_display_file.c
 OBJS = $(SRCS:.c=.o)
 
 all: $(NAME)
@@ -16,13 +11,14 @@ all: $(NAME)
 	$(CC) $(CFLAGS) -c $< -o $@
 
 $(NAME): $(OBJS)
-	ar -rcs $(NAME) $(OBJS)
+	$(CC) $(CFLAGS) -o $(NAME) $(OBJS)
 	
 clean:
 	rm -f $(OBJS)
 
-fclean:
+fclean: clean
 	rm -f $(NAME)
+
 re: fclean all
 
 .PHONY: all clean fclean re
